@@ -1,28 +1,21 @@
 body {
-    --background: hsl(210, 45%, 60%)
-  }
-  
-  h1{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  p {
-    font-style: italic;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  label {
-      display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 1.1rem;
-  }
-  input {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 1.1rem;
-  }
+  background-color: #FFD1DC;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: Georgia;
+}
+
+
+p {
+  font-style: italic;
+}
+
+label {
+  font-size: 15px;
+}
+
+input {
+  font-size: 12px;
+}
