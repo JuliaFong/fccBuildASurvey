@@ -38,3 +38,5 @@ To complete freeCodeCamps 300 hour HTML5 & CSS3 certification, making a front-en
 * User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
 
 * User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
+
+![survey](bffsurvey.png)
