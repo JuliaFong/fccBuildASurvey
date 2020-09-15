@@ -1,131 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Build a survey-form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BFF fcc Survey</title>
 </head>
 <body>
-    <head>
-        <title>
-         Best friend survey
-      </title>
-    </head>
-      <header>
-        <h1 id="title">Let's be friends</h1>
-        <p id="description">Moved to a new State & looking for friends? Use this survey to find your new bestie!</p>
-      </header>
-      
-      <main>
-        <div class="form__group">
-        <form id="survey-form">
-          <label id="name--label" for="name">Name:</label>
-          <input type="text" name="name" id="name" class="form" placeholder="Enter name" required/>
-          </div>
-          <div class="form__group">
-            <label id="email-label" for="email">Email</label>
-           <input type="email" name="email" id="email" class="form" placeholder="Enter Email" required/>
+
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Best friend survey!</h1>
+      <p id="description" class="description text-center">
+        Moved to a new State & looking for friends? Use this survey to find your new bestie!
+      </p>
+    </header>
+    <form id="survey-form">
+      <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+      </div>
+       <div class="form-group">
+        <label id="number-label" for="number">
+          Age<span class="clue">(optional)</span>
+        </label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
         </div>
-          <div class="form__group">
-            <label id="number--label" for="number"> Enter Age: </label>
-            <input id="number--label" name="age" id="number" class="form" placeholder="Enter age" required />
-          </div>
-          <div class="form__group">
-            <label id="gender--label" for="gender">
-              <input type="radio" name="gender" value="male"/><span>Male</span>
-            </label>
-            <label id="gender--label" for="gender">
-              <input type="radio" name="gender" value="female"/><span>Female</span>
-            </label>
-            <label id="gender--label" for="gender">
-              <input type="radio" name="gender" value="non-binary" />
-              <span>Non-binary</span>
-            </label>
-            <label id="gender--label" for="gender">
-              <input type="radio" name="gender" value="none"/>
-              <span>Prefer not to answer!</span>
-            </label>
-          </div>
-          <div class="form-group">
-            <label id="hobbies--label" for="hobbies">
-            <h3>What're your hobbies?</h3>
-            <div class="hobbies">
-                <input type="checkbox" name="hobbies" value="theatre"/>
-                  <span>Theatre</span>
-                <input type="checkbox" name="hobbies" value="dance"/>
-                  <span>Dance</span>
-                <input type="checkbox" name="hobbies" value="swim"/>
-                  <span>Swimming</span>
-                <input type="checkbox" name="hobbies" value="anime"/>
-                  <span>Anime</span>
-                <input type="checkbox" name="hobbies" value="read"/>
-                <span>Reading</span>
-            </div>
-            <div class="hobbies">
-                <input type="checkbox" name="hobbies" value="Movie"/>
-                   <span>Watch movies</span>
-                <input type="checkbox" name="hobbies" value="football"/>
-                  <span>Football</span>
-                <input type="checkbox" name="hobbies" value="skate"/>
-                  <span>Ice Skating</span>
-                <input type="checkbox" name="hobbies" value="Roller"/>
-                  <span>Rollerblading</span>
-                <input type="checkbox" name="hobbies" value="eat"/>
-                  <span>Being a foodie</span>
-            </div>
-              <input type="checkbox" name="hobbies" value="boba"/>
-                   <span>Boba</span>
-              <input type="checkbox" name="hobbies" value="code"/>
-                   <span>Coding</span>
-              <input type="checkbox" name="hobbies" value="hack"/>
-                   <span>Hacker</span>
-              <input type="checkbox" name="hobbies" value="write"/>
-                   <span>Writing</span>
-                <input type="checkbox" name="hobbies" value="knit">
-                    <span>Knitting</span>
-            </label>
-          </div>
-            <div id="dropdown">
-              <label for="dropdown" id="dropdown-label">
-                   <h3>
-                       What're your aspirations?
-                    </h3>          
-              <select id="dropdown" name="dropdown" class="form-control" required>
-                 <option disabled selected value>Select aspirations</option>
-                <option value="act">
-                  Actress/Actor
-                </option>
-                <option value="author">
-                    Author
-                </option>
-                <option value="mill">
-                    Millionaire
-                </option>
-                <option value="foods">
-                    Chef
-                </option>
-                <option value="music">
-                    Musician/Singer
-                </option>
-                <option value="idk">
-                  IDK yet tbh
-                </option>
-              </select>
-            </label>
-              <div class="form-group">
-          <p>Anything else I should know? Allergies? Favorite musice genre?</p>
-          <textarea id="comments" class="input--textarea" name="comment"
-            placeholder="Shoot me a message"></textarea>
+        <div class="form-group">
+          <p>What are your hobbies?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select favorite hobby</option>
+            <option value="reading">Reading</option>
+            <option value="anime">Anime</option>
+            <option value="video">Video Games</option>
+            <option value="numerous">I have numerous hobbies</option>
+            <option value="idk">IDK</option>
+          </select>
         </div>
+    
+        <div class="form-group">
+          <p>Why do you want to be friends?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="bored"
+              type="radio"
+              class="input-radio"
+              checked
+            />boredom</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="why"
+              type="radio"
+              class="input-radio"
+            />Why not?</label
+          >
+    
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />Not sure</label
+          >
+        </div>
+    
+        <div class="form-group">
+          <p>
+            What Other hobbies do you have
+          </p>
+          <select id="more-hobbies" name="moreHobby" class="form-control" required>
+            <option disabled selected value>Select a hobby</option>
+            <option value="boba">drinking boba</option>
+            <option value="makeup">Make-up</option>
+            <option value="netflix">Netflix</option>
+            <option value="writing">Writing</option>
+          </select>
+        </div>
+    
+        <div class="form-group">
+          <p>
+            What else is there to know?
+            <span class="clue">(Check all that may apply, please!)</span>
+          </p>
+    
+          <label
+            ><input
+              name="prefer"
+              value="new"
+              type="checkbox"
+              class="input-checkbox"
+            />I'm new to town</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="Im shy"
+              type="checkbox"
+              class="input-checkbox"
+            />I'm shy</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="adult"
+              type="checkbox"
+              class="input-checkbox"
+            />It's hard making friends as an adult</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="board"
+              type="checkbox"
+              class="input-checkbox"
+            />I like board games</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="cats"
+              type="checkbox"
+              class="input-checkbox"
+            />Prefers Cats</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="dogs"
+              type="checkbox"
+              class="input-checkbox"
+            />Dog person</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="animals"
+              type="checkbox"
+              class="input-checkbox"
+            />I like both cats & dogs</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="coffee"
+              type="checkbox"
+              class="input-checkbox"
+            />Let's grab coffee</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="insta"
+              type="checkbox"
+              class="input-checkbox"
+            />follow me on insta</label
+          >
+        </div>
+    
+        <div class="form-group">
+          <p>Anything else I should know?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Speak now or forever hold your peace..."
+          ></textarea>
+        </div>
+    
         <div class="form-group">
           <button type="submit" id="submit" class="submit-button">
             Submit
           </button>
         </div>
-    </form>
-</div>        
+      </form>
+    </div>
+    
+  
 </body>
 </html>
              
